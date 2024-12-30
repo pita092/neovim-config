@@ -1,0 +1,118 @@
+print"hello"
+
+
+-- {
+--   "iguanacucumber/magazine.nvim",
+--   event = "InsertEnter",
+--   name = "nvim-cmp",
+--   dependencies = {
+--     { "iguanacucumber/mag-nvim-lsp",       name = "cmp-nvim-lsp", opts = {} },
+--     { "iguanacucumber/mag-nvim-lua",       name = "cmp-nvim-lua" },
+--     { "iguanacucumber/mag-buffer",         name = "cmp-buffer" },
+--     { "lukas-reineke/cmp-under-comparator" },
+--     {
+--       "L3MON4D3/LuaSnip",
+--       dependencies = { "rafamadriz/friendly-snippets", "saadparwaiz1/cmp_luasnip" },
+--       config = function()
+--         return require("luasnip.loaders.from_vscode").lazy_load()
+--       end,
+--     },
+--   },
+--   config = function()
+--     return require("plugin.plugin_opts.cmp")
+--   end,
+-- },
+
+
+  -- {
+  --   "ms-jpq/coq.thirdparty",
+  --   even = "VeryLazy",
+  --   config = function()
+  --     require("coq_3p") {
+  --       { src = "nvimlua", short_name = "LUA", conf_only = true },
+  --     }
+  --   end
+  -- },
+  -- {
+  --   "neovim/nvim-lspconfig", -- REQUIRED: for native Neovim LSP integration
+  --   event = "InsertEnter",
+  --   dependencies = {
+  --     { "ms-jpq/coq_nvim",       branch = "coq" },
+  --     { "ms-jpq/coq.artifacts",  branch = "artifacts" },
+  --     { 'ms-jpq/coq.thirdparty', branch = "3p" }
+  --   },
+  --   init = function()
+  --     vim.g.coq_settings = {
+  --       auto_start = 'shut-up',
+  --       keymap = {
+  --         recommended = false,
+  --         bigger_preview = "",
+  --         jump_to_mark = "<C-b>"
+  --       },
+  --       match = {
+  --         exact_matches = 2,             -- Minimum exact matches required
+  --         fuzzy_cutoff = 0.6,            -- Minimum similarity score for fuzzy matches
+  --         look_ahead = 2,                -- Characters to look ahead for typos
+  --         max_results = 33,              -- Maximum number of results to return
+  --         unifying_chars = { "-", "_" }, -- Characters that count as part of words
+  --       },
+  --       display = {
+  --         preview = {
+  --           positions = { east = 4, north = 1, south = 2, west = 3 },
+  --         },
+  --         statusline = {
+  --           helo = false
+  --         },
+  --         pum = {
+  --           ellipsis = '231321',
+  --           fast_close = false,
+  --           kind_context = {
+  --             "  ", " "
+  --           },
+  --           source_context = {
+  --             "|", "|"
+  --           },
+  --           x_max_len = 66,
+  --           y_max_len = 16,
+  --           y_ratio = 0.3,
+  --         },
+  --         ghost_text = {
+  --           enabled = true,
+  --         },
+  --         icons = {
+  --           mode = "short",
+  --           mappings = {
+  --             Function = " ",
+  --             Variable = " ",
+  --             Constant = " ",
+  --             Enum = " ",
+  --             EnumMember = " ",
+  --             Class = " ",
+  --             Interface = " ",
+  --             Snippet = " ",
+  --             Keyword = " ",
+  --             Field = " ",
+  --           },
+  --         },
+  --       }
+  --     }
+  --   end,
+  --   config = function()
+  --     local lsp = require "lspconfig"
+  --     local coq = require "coq"
+  --     lsp.lua_ls.setup(coq.lsp_ensure_capabilities())
+  --     lsp.clangd.setup(coq.lsp_ensure_capabilities())
+  --     vim.api.nvim_set_keymap('i', '<Esc>', [[pumvisible() ? "\<C-e><Esc>" : "\<Esc>"]], { expr = true, silent = true })
+  --     vim.api.nvim_set_keymap('i', '<C-c>', [[pumvisible() ? "\<C-e><C-c>" : "\<C-c>"]], { expr = true, silent = true })
+  --     vim.api.nvim_set_keymap(
+  --       "i",
+  --       "<CR>",
+  --       [[pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"]],
+  --       { expr = true, silent = true }
+  --     )
+  --     vim.api.nvim_set_keymap('i', '<C-j>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true, silent = true })
+  --     vim.api.nvim_set_keymap('i', '<C-k>', [[pumvisible() ? "\<C-p>" : "\<BS>"]], { expr = true, silent = true })
+  --   end,
+  --
+  -- },
+
